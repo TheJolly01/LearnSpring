@@ -47,13 +47,22 @@ L'idea alla base della DI è quella di avere un componente esterno (assembler) c
 Esistono 3 forme di injection:
 - Constructor Injection, dove la dipendenza viene iniettata tramite l'argomento del costruttore
 - Setter Injection, dove la dipendenza viene inettatta tramite metodo set
-- Interface Injection che si basa sul mapping tra intergaccia e relativa implementazione
+- Interface Injection che si basa sul mapping tra interfaccia e relativa implementazione
 
+La DI può essere realizzata in molteplici modi, come utilizzo di una factory.
 
+### Container
+Un modo migliore per poter lavorare con la DI è quello di utilizzare come assembler un IoC Container in grado di compiere operazionio di injection
+Un container è un componente esterno che si prende carico di una serie di compiti esonerando così lo svliluppatore dal preoccuparsene. Uno IoC Container non è altro che un container specializzato nella DI, che è in grado di compiere opportune operazioni di injection
 
+## IoC Container
+Fornisce un contesto altamente configurabile per la creazione e risoluzione delle dipendenze che qui vengono chiamati bean (NON SONO I JAVA BEAN)
 
+In Spring un bean non deve aderire a nessun tipo di contratto e può essere rappresentato da una qualunque classe Java
 
-
+IoC è realizzato da due interfacce:
+- BeanFactory, che definisce le funzionalità di base per la gestione dei bean
+- ApplicationContext, che estende queste funzionalita basilari aggiungendone altre tipicamente enterprise come ad esempio la gestione degli eventi, l'internazionalizzazione e l'integrazione con AOP
 
 
 
